@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body  {
+  background-image: url("https://scx2.b-cdn.net/gfx/news/2022/farming-practices-good.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}
+#div1, #div2 {
+  float: left;
+  width: 100px;
+  height: 35px;
+  margin: 10px;
+  padding: 10px;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  border: 1px solid black;
+}
+.button {
+  background-color: #4c82af;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+
+<p>Drag and drop to get into the website.</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="data:image/jpeg;base64,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" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+</div>
+<audio controls>
+    <source src="Welcome.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br><br><br>
+<a href="home.php" class="button">Welcome!!</a>
+</body>
+</html>
